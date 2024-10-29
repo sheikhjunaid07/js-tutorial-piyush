@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <nav class="block">
+      <p class="paragraph">Welcome to my Website</p>
+    </nav>
+    <div class="block">
+      <h4>Hi My Name is <span id="name">Sheikh Junaid </span>;)</h4>
+      <p class="paragraph">Here is a code for you</p>
+      <code>Console.log("Hello World")</code>
+
+      <script>
+        //Note: querySelector is always choose the first element. (if you have more than 1 div querySelector always choose first )
+
+        // 1. Using Tag Name-
+
+        // const head = document.querySelector("head");
+
+        const div = document.querySelector("div");
+        console.log(div.innerHTML);
+        // div.innerHTML = "Write using div.innerHTML";
+
+        const body = document.querySelector("body");
+        // body.innerHTML = "<h1>Write using innerHTML</h1>";
+
+        //see what inside innerHTML
+        console.log(body.innerHTML);
+        // console.log(head.innerHTML);
+
+        //change <code> tag using innerHTML
+        const code = document.querySelector("code");
+        code.innerHTML = "console.log(Write using innerHTML)";
+
+        // 2. Using Id(#)-
+
+        const id = document.querySelector("#name");
+        id.innerText = "Sheikh Parvez  "; //if HTML tag is not available you can use innerText
+
+        //3. Using Class(.)-
+        const usingClass = document.querySelector(".paragraph");
+        console.log(usingClass);
+        usingClass.innerHTML = "This Paragraph is changed by using innerHTML"
+      </script>
+    </div>
+  </body>
+</html>
