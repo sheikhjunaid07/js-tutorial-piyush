@@ -44,7 +44,15 @@
         //3. Using Class(.)-
         const usingClass = document.querySelector(".paragraph");
         console.log(usingClass);
-        usingClass.innerHTML = "This Paragraph is changed by using innerHTML"
+        usingClass.innerHTML = "This Paragraph is changed by using innerHTML";
+
+        //access children
+        const child = document.querySelector("div");
+        console.log(child.children);
+
+        //know or access the parent tag
+        const parentTag = document.querySelector("div");
+        console.log(parentTag.parentElement);
       </script>
     </div>
   </body>
