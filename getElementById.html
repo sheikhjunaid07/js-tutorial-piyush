@@ -15,6 +15,11 @@
       .underline {
         text-decoration: underline;
       }
+
+      .apply-on-para {
+        color: blueviolet;
+        text-decoration: dotted;
+      }
     </style>
   </head>
   <body>
@@ -22,6 +27,9 @@
       <p class="paragraph">Welcome to my Website</p>
     </nav>
     <div class="block">
+      <h3 style="color: deeppink" id="demo">
+        This line is written to use inline styling using DOM
+      </h3>
       <h4>Hi My Name is <span id="username">Sheikh Junaid </span>;)</h4>
       <h3 id="apply-color-red">This is a demo</h3>
       <p class="paragraph">Here is a code for you</p>
@@ -41,8 +49,22 @@
 
       const applyRed = document.getElementById("apply-color-red");
 
-      //you can added more than one styling 
+      //you can added more than one styling
       applyRed.classList.add("apply-color", "underline");
+
+      //for demo id
+      const demoId = document.getElementById("demo");
+      demoId.style.backgroundColor = "aqua";
+      demoId.style.textDecoration = "underline";
+
+      //you can also get the parent tag of given tag or element
+      console.log(demoId.parentElement);
+
+      //you can change or add styling on parent element/tag from child
+      demoId.parentElement.style.backgroundColor = "grey";
+
+      //you can remove the tag/element
+      demoId.remove();
     </script>
   </body>
 </html>
