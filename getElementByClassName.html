@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Element By Class Name</title>
+  </head>
+  <body>
+    <nav class="block">
+      <p class="nav-para">This is from navbar-paragraph tag</p>
+    </nav>
+    <div class="block">
+      <h3>hey, there my name is <span id="username">Sheikh Junaid </span>;)</h3>
+      <p class="block">this is a paragraph tag</p>
+      <code>console.log("Hey there")</code>
+    </div>
+    <script>
+      const classElement = document.getElementsByClassName("block");
+      console.log(classElement);
+
+      //you can use for-loop to make changes on the tag or element one by one
+      for (let i = 0; i < classElement.length; i++) {
+        classElement.item(i).style.background = "aqua";
+      }
+    </script>
+  </body>
+</html>
