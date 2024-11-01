@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="block">
+      <h4 id="changeColor">Sheikh Junaid</h4>
+    </div>
+    <button id="buttonToRed">Click to change Color</button>
+    <script>
+      const colorRed = document.getElementById("buttonToRed");
+      const demo2 = document.getElementById("changeColor");
+
+      function demo() {
+        demo2.style.backgroundColor = "red";
+        console.log("change color successfully");
+      }
+
+      colorRed.addEventListener("click", demo);
+    </script>
+  </body>
+</html>
