@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <input id="enter-name" type="text" />
+    <button id="enter-button">Click Me</button>
+    <h2 id="show-name"></h2>
+    <script>
+      const enterName = document.getElementById("enter-name");
+      const enterButton = document.getElementById("enter-button");
+      const showName = document.getElementById("show-name");
+
+      //to save details to local storage
+      enterButton.addEventListener("click", () => {
+        const value = enterName.value;
+        localStorage.setItem("name-key", value);
+      });
+
+      //to print details on the screen
+      window.addEventListener("load", () => {
+        const show = localStorage.getItem("name-key");
+        showName.innerHTML = show;
+      });
+    </script>
+  </body>
+</html>
