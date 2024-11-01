@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Element</title>
+  </head>
+  <body>
+    <div id="addElement"></div>
+    <button id="clickToAdd">Click me</button>
+    <script>
+      const element = document.getElementById("addElement");
+      const button = document.getElementById("clickToAdd");
+
+      button.addEventListener("click", () => {
+        const add = document.createElement("h2");
+        add.innerHTML = "Junaid";
+        element.appendChild(add);
+      });
+    </script>
+  </body>
+</html>
