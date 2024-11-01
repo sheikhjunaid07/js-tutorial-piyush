@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <body>
+    <h4>Click this button to see alert box</h4>
+    <button id="alertBox">Click me</button>
+    <script>
+      // function showAlertBox() {
+      //   alert("Hey, There");
+      //   console.log("Alert box opened successfully");
+      // }
+
+      //another way using DOM Manipulation
+      const alertButton = document.getElementById("alertBox");
+      // alertButton.onclick = () => {
+      //   alert("Hey, There");
+      //   console.log("Button clicked");
+      // };
+
+      //most preferred way
+      alertButton.addEventListener("click", function () {
+        console.log("button clicked using preferred way");
+      }); 
+      
+    </script>
+  </body>
+</html>
