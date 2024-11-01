@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add or Remove Numbers</title>
+  </head>
+  <body>
+    <h1 id="numbers"></h1>
+    <button id="addNum">Click To Add Numbers</button>
+    <button id="removeNum">Click To Remove Numbers</button>
+    <script>
+      const number = document.getElementById("numbers");
+      const buttonAdd = document.getElementById("addNum");
+      const buttonRemove = document.getElementById("removeNum");
+
+      let count = 1;
+
+      function adding() {
+        const el = document.createElement("li");
+        el.innerText = count;
+        number.appendChild(el);
+        count++;
+      }
+
+      //incompleted
+      function removing() {
+        const rl = document.removeChild("li");
+        number.removeChild(rl);
+      }
+
+      buttonAdd.addEventListener("click", adding);
+      buttonRemove.addEventListener("click", removing);
+    </script>
+  </body>
+</html>
