@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <h1 id="my-name" style="font-size: 20">Junaid</h1>
+    <button id="btn">Click Me</button>
+  </body>
+  <script>
+    const myName = document.getElementById("my-name");
+    const button = document.getElementById("btn");
+
+    function fontSizer(size) {
+      function changeSize() {
+        myName.style.fontSize = `${size}px`;
+      }
+      return changeSize;
+    }
+
+    //both methods are same
+    // button.addEventListener("click", fontSizer(50));
+
+    const size50 = fontSizer(50);
+    button.addEventListener("click", size50);
+  </script>
+</html>
