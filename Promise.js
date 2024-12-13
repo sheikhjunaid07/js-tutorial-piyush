@@ -74,3 +74,16 @@ async function promiseForAsyncAwait() {
 }
 
 promiseForAsyncAwait();
+
+//get data from the API
+async function getData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+//function call
+getData();
